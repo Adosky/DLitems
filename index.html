@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DL Items – Deadlock Item Browser</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo-group">
+        <div class="logo">
+          <span class="logo-dl">DL</span><span class="logo-items">ITEMS</span>
+        </div>
+        <p class="subtitle">Deadlock Item Browser</p>
+      </div>
+      <div class="search-wrap">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search items..." autocomplete="off"/>
+        <span class="search-icon">⌕</span>
+      </div>
+    </div>
+
+    <!-- TYPE TABS in header -->
+    <div class="type-tabs">
+      <button class="tab-btn active" data-type="all">All</button>
+      <button class="tab-btn weapon" data-type="weapon">
+        <span class="tab-icon">⚙</span> Weapon
+      </button>
+      <button class="tab-btn vitality" data-type="vitality">
+        <span class="tab-icon">♥</span> Vitality
+      </button>
+      <button class="tab-btn spirit" data-type="spirit">
+        <span class="tab-icon">✦</span> Spirit
+      </button>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <!-- LEFT SIDEBAR: Categories -->
+    <aside class="sidebar">
+      <h2 class="sidebar-title">Categories <button id="resetCategories" class="reset-btn">✕</button></h2>
+      <ul class="category-list" id="categoryList">
+        <li class="cat-item active" data-tag="all">All Items</li>
+        <li class="cat-item" data-tag="melee-resist">Melee Resist</li>
+        <li class="cat-item" data-tag="melee-damage">Melee Damage</li>
+        <li class="cat-item" data-tag="max-ammo">Max Ammo</li>
+        <li class="cat-item" data-tag="fire-rate">Fire Rate</li>
+        <li class="cat-item" data-tag="weapon-damage">Weapon Damage</li>
+        <li class="cat-item" data-tag="bullet-resist">Bullet Resist</li>
+        <li class="cat-item" data-tag="bullet-pierce">Bullet Pierce</li>
+        <li class="cat-item" data-tag="antiheal">Antiheal</li>
+        <li class="cat-item" data-tag="ability-change">Ability Change</li>
+        <li class="cat-item" data-tag="spirit-power">Spirit Power</li>
+        <li class="cat-item" data-tag="spirit-damage">Spirit Damage</li>
+        <li class="cat-item" data-tag="spirit-resist">Spirit Resist</li>
+        <li class="cat-item" data-tag="spirit-pierce">Spirit Pierce</li>
+        <li class="cat-item" data-tag="debuff-resist">Debuff Resist</li>
+        <li class="cat-item" data-tag="debuff">Debuff</li>
+        <li class="cat-item" data-tag="healing">Healing</li>
+        <li class="cat-item" data-tag="regen">Regen</li>
+        <li class="cat-item" data-tag="lifesteal">Lifesteal</li>
+        <li class="cat-item" data-tag="bonus-health">Bonus Health</li>
+        <li class="cat-item" data-tag="barrier">Barrier</li>
+        <li class="cat-item" data-tag="utility">Utility</li>
+        <li class="cat-item" data-tag="mobility">Mobility</li>
+        <li class="cat-item" data-tag="active">Active</li>
+        <li class="cat-item" data-tag="imbue">Imbue</li>
+        <li class="cat-item" data-tag="YESSS">YESSS</li>
+      </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+      <div class="items-wrapper" id="itemsWrapper"></div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
